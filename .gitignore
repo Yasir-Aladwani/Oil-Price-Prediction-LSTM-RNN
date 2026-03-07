@@ -7,5 +7,4 @@ venv/
 *.h5
 *.keras
 .DS_Store
-results/*.png
 data/*.csv
