@@ -123,7 +123,6 @@ LSTM helps reduce these issues using gates that control what information should 
 | `Final Report` | Final project report documenting the methodology and results |
 | `README.md` | Project documentation |
 | `requirements.txt` | Required Python libraries |
-| `src/` | Source code files |
 | `data/` | Dataset-related files |
 | `results/` | Model performance visuals and prediction plots |
 | `results/lstm_rnn_comparison.png` | Actual vs predicted comparison for LSTM and Simple RNN |
