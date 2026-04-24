@@ -1,4 +1,6 @@
-# Oil Price Prediction Using LSTM & Simple RNN
+<h1 align="center">
+  Oil Price Prediction Using LSTM & Simple RNN
+</h1>
 
 <p align="center">
   <img src="results/lstm_rnn_comparison.png" width="90%" alt="LSTM and Simple RNN Model Performance Comparison"/>
