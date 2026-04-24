@@ -1,15 +1,13 @@
 # Oil Price Prediction Using LSTM & Simple RNN
 
 <p align="center">
-  <img src="images/lstm_performance.png" width="45%" alt="LSTM Model Performance"/>
-  <img src="images/rnn_performance.png" width="45%" alt="Simple RNN Model Performance"/>
+  <img src="results/lstm_rnn_comparison.png" width="90%" alt="LSTM and Simple RNN Model Performance Comparison"/>
 </p>
 
 <p align="center">
   <b>Deep Learning Time-Series Forecasting Project</b><br>
   Developed during my internship at <b>Aramco</b>
 </p>
-
 ---
 
 ## Project Overview
@@ -117,12 +115,16 @@ LSTM helps reduce these issues using gates that control what information should 
 
 ## Repository Contents
 
-| File | Description |
+| File / Folder | Description |
 |---|---|
-| `Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb` | Main notebook |
-| `Final Report` | Project report |
+| `Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb` | Main notebook for data preprocessing, model training, evaluation, and comparison |
+| `Final Report` | Final project report documenting the methodology and results |
 | `README.md` | Project documentation |
-| `images/` | Model performance visuals |
+| `requirements.txt` | Required Python libraries |
+| `src/` | Source code files |
+| `data/` | Dataset-related files |
+| `results/` | Model performance visuals and prediction plots |
+| `results/lstm_rnn_comparison.png` | Actual vs predicted comparison for LSTM and Simple RNN |
 
 ---
 
