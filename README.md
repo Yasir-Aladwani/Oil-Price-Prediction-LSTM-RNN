@@ -18,7 +18,7 @@
   <tr>
     <td width="33%" align="center">
       <h3>
-        <a href="https://yasir-oil-price-prediction.streamlit.app/">Try&nbsp;the&nbsp;Live&nbsp;Application</a>
+        <a href="https://yasir-oil-price-prediction.streamlit.app/">Live&nbsp;Application</a>
       </h3>
     </td>
     <td width="34%" align="center">
