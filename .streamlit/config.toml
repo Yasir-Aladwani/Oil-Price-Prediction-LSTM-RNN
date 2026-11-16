@@ -1,0 +1,32 @@
+# Theme for the Oil Price Prediction dashboard.
+# Blue/green energy palette inspired by the sector; not an official brand palette.
+
+[theme]
+base = "light"
+primaryColor = "#007DBA"
+backgroundColor = "#F5F8FA"
+secondaryBackgroundColor = "#EAF0F4"
+textColor = "#123047"
+linkColor = "#006A9E"
+linkUnderline = false
+borderColor = "#DCE4EA"
+blueColor = "#007DBA"
+greenColor = "#4F8F15"
+grayColor = "#5B6B78"
+font = "'Source Sans 3':https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+headingFont = "'Barlow Semi Condensed':https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+headingFontSizes = ["2.6rem", "1.55rem", "1.2rem", "1.05rem", "1rem", "0.9rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+baseFontSize = 16
+metricValueFontSize = "1.85rem"
+metricValueFontWeight = 600
+baseRadius = "10px"
+buttonRadius = "8px"
+chartCategoricalColors = ["#007DBA", "#5E9E1A", "#123047"]
+dataframeHeaderBackgroundColor = "#F0F4F7"
+dataframeBorderColor = "#DCE4EA"
+paddingTop = "0.75rem"
+paddingBottom = "3rem"
+
+[client]
+toolbarMode = "viewer"

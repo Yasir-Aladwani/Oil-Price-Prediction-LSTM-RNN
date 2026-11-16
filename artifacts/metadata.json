@@ -1,0 +1,224 @@
+{
+  "created_at_utc": "2026-11-16T00:44:58+00:00",
+  "source": {
+    "kind": "colab",
+    "description": "Google Colab training run recorded in the project notebook",
+    "notebook": "Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb",
+    "notebook_sha256": "748f5bdf71bc62f71f262fe291b63dd21a38b360cf81cb4ccbbe9d722908a4ef",
+    "scaler_sha256": "4a5b24455fe312ebdf054ee40c3fac78fdebd9a5a4c838b92fc71041c0e2f371",
+    "scaler_sklearn_version_saved": "1.6.1"
+  },
+  "data": {
+    "file": "Crude_Oil_Data.csv",
+    "sha256": "f0fd1fe7bd7d9316cd6465808b0ff853b4a2c180f80fc0e93ad22fabffc15cab",
+    "rows": 6073,
+    "first_date": "2000-08-23",
+    "last_date": "2024-10-30"
+  },
+  "preprocessing": {
+    "features": [
+      "Close"
+    ],
+    "target": "Close",
+    "time_step": 60,
+    "horizon": "1 observation ahead",
+    "scaler": "MinMaxScaler(feature_range=(0, 1)) fit on training rows only",
+    "scaler_data_min": 17.45000076,
+    "scaler_data_max": 145.2899933
+  },
+  "splits": {
+    "train": {
+      "rows": 4251,
+      "start": "2000-08-23",
+      "end": "2017-08-03",
+      "targets": 4191
+    },
+    "validation": {
+      "rows": 910,
+      "start": "2017-08-04",
+      "end": "2021-03-17",
+      "targets": 910
+    },
+    "test": {
+      "rows": 912,
+      "start": "2021-03-18",
+      "end": "2024-10-30",
+      "targets": 912
+    }
+  },
+  "training": {
+    "environment": "Google Colab",
+    "library_versions": {
+      "Python": "3.13.16",
+      "TensorFlow": "2.21.0",
+      "Keras": "3.13.2",
+      "scikit-learn": "1.6.1"
+    },
+    "seed": 42,
+    "optimizer": "adam",
+    "loss": "mean_squared_error",
+    "batch_size": 32,
+    "max_epochs": 50,
+    "early_stopping": "monitor=val_loss, patience=8, restore_best_weights=True (a separate instance per model)",
+    "models": {
+      "LSTM": {
+        "file": "oil_price_lstm_model.keras",
+        "epochs_run": 50,
+        "best_logged_epoch": 49,
+        "best_logged_val_loss": 0.00038897,
+        "weights_epoch": 49,
+        "weights_val_loss": 0.00038896877411610033,
+        "parameters": 30651,
+        "keras_version_saved": "3.13.2",
+        "date_saved": "2026-11-16@00:33:31",
+        "sha256": "0e9db6a871f60c63385674466c5dfe3a1d3605bafd5717cbbefe346d30144f43"
+      },
+      "Simple RNN": {
+        "file": "oil_price_simple_rnn_model.keras",
+        "epochs_run": 27,
+        "best_logged_epoch": 19,
+        "best_logged_val_loss": 0.0003862,
+        "weights_epoch": 19,
+        "weights_val_loss": 0.00038619933093460426,
+        "parameters": 7701,
+        "keras_version_saved": "3.13.2",
+        "date_saved": "2026-11-16@00:33:31",
+        "sha256": "e31fb06f71c718cdb7c5406a259975ab4e6d053d1cd46a5b072b8a0e20c9fb41"
+      }
+    }
+  },
+  "test_metrics": {
+    "LSTM": {
+      "MAE": 1.7431163952073276,
+      "RMSE": 2.307902597077567,
+      "R2": 0.9634011820446216
+    },
+    "Simple RNN": {
+      "MAE": 1.853831909815118,
+      "RMSE": 2.4341999872659357,
+      "R2": 0.9592859206281691
+    },
+    "Persistence baseline": {
+      "MAE": 1.5010636640789476,
+      "RMSE": 2.0709984076614902,
+      "R2": 0.9705292195352297
+    }
+  },
+  "reported_metrics": {
+    "LSTM": {
+      "MAE": 1.7431161107781457,
+      "RMSE": 2.307902355176296,
+      "R2": 0.9634011897167825
+    },
+    "Simple RNN": {
+      "MAE": 1.8538334950895299,
+      "RMSE": 2.4342015947395543,
+      "R2": 0.9592858668554056
+    }
+  },
+  "verification": {
+    "tolerance": {
+      "MAE": 0.001,
+      "RMSE": 0.001,
+      "R2": 1e-05
+    },
+    "abs_diff": {
+      "LSTM": {
+        "MAE": 2.8442918198479106e-07,
+        "RMSE": 2.419012710141999e-07,
+        "R2": 7.672160906579961e-09
+      },
+      "Simple RNN": {
+        "MAE": 1.5852744119637663e-06,
+        "RMSE": 1.6074736186588723e-06,
+        "R2": 5.3772763464188245e-08
+      }
+    },
+    "checks": [
+      {
+        "check": "Notebook ran without errors",
+        "passed": true,
+        "detail": "27 code cells"
+      },
+      {
+        "check": "Scaler file and notebook report the same scikit-learn",
+        "passed": true,
+        "detail": "scaler 1.6.1, notebook 1.6.1"
+      },
+      {
+        "check": "Dataset shape matches the notebook",
+        "passed": true,
+        "detail": "6073 rows"
+      },
+      {
+        "check": "Sequence shapes match the notebook",
+        "passed": true,
+        "detail": "X_train=(4191, 60, 1), X_val=(910, 60, 1), X_test=(912, 60, 1)"
+      },
+      {
+        "check": "Exported scaler was fit on training rows only",
+        "passed": true,
+        "detail": "range 17.4500 to 145.2900"
+      },
+      {
+        "check": "Exported scaler is a 0-1 MinMaxScaler on one feature",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "check": "Chronological split: train < validation < test",
+        "passed": true,
+        "detail": "test 2021-03-18 to 2024-10-30"
+      },
+      {
+        "check": "LSTM: recomputed metrics match model_comparison.csv",
+        "passed": true,
+        "detail": "MAE 1.743116 (diff 2.8e-07), RMSE 2.307903 (diff 2.4e-07), R2 0.963401 (diff 7.7e-09)"
+      },
+      {
+        "check": "LSTM: training log matches the notebook's summary",
+        "passed": true,
+        "detail": "50 epochs, best epoch 49"
+      },
+      {
+        "check": "LSTM: saved weights match a logged epoch",
+        "passed": true,
+        "detail": "validation MSE 3.8897e-04 = epoch 49 of 50"
+      },
+      {
+        "check": "LSTM: saved weights are from the best epoch",
+        "passed": true,
+        "detail": "weights epoch 49, lowest validation loss at epoch 49"
+      },
+      {
+        "check": "Simple RNN: recomputed metrics match model_comparison.csv",
+        "passed": true,
+        "detail": "MAE 1.853832 (diff 1.6e-06), RMSE 2.434200 (diff 1.6e-06), R2 0.959286 (diff 5.4e-08)"
+      },
+      {
+        "check": "Simple RNN: training log matches the notebook's summary",
+        "passed": true,
+        "detail": "27 epochs, best epoch 19"
+      },
+      {
+        "check": "Simple RNN: saved weights match a logged epoch",
+        "passed": true,
+        "detail": "validation MSE 3.8620e-04 = epoch 19 of 27"
+      },
+      {
+        "check": "Simple RNN: saved weights are from the best epoch",
+        "passed": true,
+        "detail": "weights epoch 19, lowest validation loss at epoch 19"
+      }
+    ],
+    "warnings": []
+  },
+  "environment": {
+    "python": "3.12.10",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scikit_learn": "1.6.1"
+  }
+}

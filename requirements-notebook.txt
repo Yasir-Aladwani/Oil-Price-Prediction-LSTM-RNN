@@ -1,0 +1,4 @@
+# Extra packages for running the notebook locally (the app does not need them).
+-r requirements.txt
+matplotlib
+jupyter

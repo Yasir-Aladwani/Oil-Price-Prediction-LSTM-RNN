@@ -3,8 +3,26 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
+env/
 .env
+.streamlit/secrets.toml
+*.log
+.DS_Store
+Thumbs.db
+
+# Model files are ignored except the two verified models the dashboard loads
 *.h5
 *.keras
-.DS_Store
+!artifacts/oil_price_lstm_model.keras
+!artifacts/oil_price_simple_rnn_model.keras
+
+# Data files are ignored except the dataset the dashboard reads
 data/*.csv
+!data/Crude_Oil_Data.csv
+
+# Local backups of replaced dashboard artifacts
+backups/
+# Temporary folder used while installing verified artifacts
+artifacts.staging/
+# Raw Colab export; scripts/import_colab_artifacts.py copies the verified files into artifacts/
+colab_export/
