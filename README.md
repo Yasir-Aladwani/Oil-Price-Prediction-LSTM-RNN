@@ -18,17 +18,17 @@
   <tr>
     <td width="33%" align="center">
       <h3>
-        <a href="https://yasir-oil-price-prediction.streamlit.app/">Try the Live App</a>
+        <a href="https://yasir-oil-price-prediction.streamlit.app/">Try&nbsp;the&nbsp;Live&nbsp;App</a>
       </h3>
     </td>
     <td width="34%" align="center">
       <h3>
-        <a href="Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb">Project Notebook</a>
+        <a href="Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb">Project&nbsp;Notebook</a>
       </h3>
     </td>
     <td width="33%" align="center">
       <h3>
-        <a href="Final%20Report%20Oil%20Price%20Prediction.pdf">Project Report</a>
+        <a href="Final%20Report%20Oil%20Price%20Prediction.pdf">Project&nbsp;Report</a>
       </h3>
     </td>
   </tr>
