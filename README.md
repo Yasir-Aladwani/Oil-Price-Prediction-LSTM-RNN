@@ -9,13 +9,30 @@
   <img src="results/lstm_rnn_comparison.png" width="90%" alt="Actual vs. predicted oil prices using LSTM and Simple RNN">
 </p>
 
-<p align="center">
-  <a href="[STREAMLIT_APP_URL](https://yasir-oil-price-prediction.streamlit.app/)"><strong>Try the Live App ↗</strong></a>
-  &nbsp; · &nbsp;
-  <a href="Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb">Explore the Notebook</a>
-  &nbsp; · &nbsp;
-  <a href="Final%20Report%20Oil%20Price%20Prediction.pdf">Project Report</a>
-</p>
+<table align="center" width="100%">
+  <tr>
+    <th colspan="3" align="center">
+      <h3>Explore the Project</h3>
+    </th>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <h3>
+        <a href="https://yasir-oil-price-prediction.streamlit.app/">Try the Live App</a>
+      </h3>
+    </td>
+    <td width="34%" align="center">
+      <h3>
+        <a href="Oil_Price_Prediction_LSTM_RNN_Comparison.ipynb">Project Notebook</a>
+      </h3>
+    </td>
+    <td width="33%" align="center">
+      <h3>
+        <a href="Final%20Report%20Oil%20Price%20Prediction.pdf">Project Report</a>
+      </h3>
+    </td>
+  </tr>
+</table>
 
 ---
 
