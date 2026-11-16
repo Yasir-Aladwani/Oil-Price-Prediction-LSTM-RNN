@@ -10,7 +10,8 @@
   },
   "data": {
     "file": "Crude_Oil_Data.csv",
-    "sha256": "f0fd1fe7bd7d9316cd6465808b0ff853b4a2c180f80fc0e93ad22fabffc15cab",
+    "sha256": "c2e0e8426376eabf1cbf728f837744a68b7dfa047f91dbf218fdde225531b49a",
+    "sha256_method": "SHA-256 after normalizing CRLF line endings to LF",
     "rows": 6073,
     "first_date": "2000-08-23",
     "last_date": "2024-10-30"

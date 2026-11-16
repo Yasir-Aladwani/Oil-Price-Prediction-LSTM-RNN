@@ -51,9 +51,15 @@ def prices() -> pd.DataFrame:
         st.stop()
 
 
+@st.cache_data(show_spinner=False)
+def _text_sha256(path: str, mtime: float) -> str:
+    return pipeline.text_sha256(Path(path))
+
+
 def data_sha256() -> str | None:
+    """Line-ending-independent fingerprint of the dataset (compared with metadata.json)."""
     path = config.DATA_PATH
-    return _sha256(str(path), _mtime(path)) if path.exists() else None
+    return _text_sha256(str(path), _mtime(path)) if path.exists() else None
 
 
 # -------------------------------------------------------------- artifacts ---

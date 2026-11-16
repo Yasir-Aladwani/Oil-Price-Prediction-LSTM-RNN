@@ -295,7 +295,8 @@ def main() -> int:
         },
         "data": {
             "file": config.DATA_PATH.name,
-            "sha256": pipeline.file_sha256(config.DATA_PATH),
+            "sha256": pipeline.text_sha256(config.DATA_PATH),
+            "sha256_method": "SHA-256 after normalizing CRLF line endings to LF",
             "rows": len(df),
             "first_date": df["Date"].iloc[0].strftime("%Y-%m-%d"),
             "last_date": df["Date"].iloc[-1].strftime("%Y-%m-%d"),

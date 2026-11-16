@@ -28,6 +28,16 @@ def file_sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def text_sha256(path: Path) -> str:
+    """SHA-256 of a text file with CRLF line endings normalized to LF.
+
+    Git may check a file out with CRLF on Windows and LF on Linux, so raw bytes
+    differ between machines while the content is identical. Any other change,
+    including a single value, still changes the hash.
+    """
+    return hashlib.sha256(Path(path).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def load_prices(path: Path) -> pd.DataFrame:
     """Notebook cell 4: parse dates and sort chronologically."""
     df = pd.read_csv(path)

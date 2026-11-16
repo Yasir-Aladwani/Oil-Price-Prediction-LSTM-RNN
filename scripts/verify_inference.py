@@ -81,7 +81,7 @@ def main() -> int:
         df["Date"].iloc[train_end - 1] < val_dates.iloc[0] and val_dates.iloc[-1] < test_dates.iloc[0],
         f"test starts {test_dates.iloc[0].date()}",
     )
-    check("Data file matches the one used for training", pipeline.file_sha256(config.DATA_PATH) == meta["data"]["sha256"])
+    check("Data file matches the one used for training", pipeline.text_sha256(config.DATA_PATH) == meta["data"]["sha256"])
 
     y_test_usd = nb_scaler.inverse_transform(y_test.reshape(-1, 1)).ravel()
     check(
